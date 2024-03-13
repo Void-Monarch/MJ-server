@@ -2,14 +2,18 @@
 
 ## Description 
 
-
+MJ-server is a lightweight and customizable single-store skeleton server designed to provide essential features for managing products and orders. It serves as the backend infrastructure for a retail or e-commerce application, offering a simple yet robust foundation for building a complete online store platform.
 
 ## Features
 
-- **User Authentication:** Secure user authentication and authorization for students and delivery partners.
-- **Order Management:** Place, track, and manage food orders seamlessly within the app.
-- **Vendor Integration:** Connects with local food vendors to offer a variety of food options.
-- **Student Delivery Partners:** Empowers students to earn extra income by becoming delivery partners.
+- **Product Management:** MJ-server provides endpoints for managing product data, including retrieving product information, adding new products, updating existing ones, and deleting products from the store inventory.
+
+- **Order Management:** Users can easily place orders for the available products through MJ-server. The server handles order processing, including order creation, order status updates, and order cancellation if necessary.
+
+- **Authentication and Authorization:** Secure your application with built-in authentication and authorization mechanisms. MJ-server supports user authentication and role-based access control to ensure that only authorized users can access sensitive functionalities.
+
+- **Customization:** Customize the server to fit your specific business requirements. MJ-server offers flexibility in configuring product categories, pricing, shipping options, and more, allowing you to tailor the server to match your store's unique needs.
+
 
 ## Technologies Used
 
