@@ -40,6 +40,9 @@ Make sure to configure the following environment variables:
 
 - `MONGODB_URI`: MongoDB connection string.
 - `JWT_SECRET`: Secret key for JWT authentication.
+----
+
+# Work in Progress
 
 ## Contributing
 
