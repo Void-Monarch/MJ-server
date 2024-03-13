@@ -1,0 +1,651 @@
+{
+	"info": {
+		"_postman_id": "fc596236-3780-449b-a786-1e2a8abb1e33",
+		"name": "Restro-server API Documentation",
+		"description": "This template contains a boilerplate for documentation that you can quickly customize and reuse.\n\n### How to use this template:\n\n- Replace the content given brackets (()) with your API's details.\n- Tips are formatted in `codespan` - feel free to read and remove them.\n    \n\n---\n\n`Start with a brief overview of what your API offers.`\n\nThe ((product name)) provides many API products, tools, and resources that enable you to ((add product value here)).\n\n`You can also list the APIs you offer, link to the relevant pages, or do both in this section.`\n\n## **Getting started guide**",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31716643",
+		"_collection_link": "https://warped-eclipse-322868.postman.co/workspace/Resto-server~9072be76-63ae-468f-b01d-d9569e55da90/collection/31716643-fc596236-3780-449b-a786-1e2a8abb1e33?action=share&source=collection_link&creator=31716643"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"harsh parashar\",\r\n    \"email\":\"test@test.com\",\r\n    \"hostel\":\"Tagore A\",\r\n    \"password\":\"qwerty123\",\r\n    \"passwordConfirm\":\"qwerty123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}:3000/api/v1/user/signup",
+							"host": [
+								"{{URL}}"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"test@test.com\",\r\n    \"password\":\"qwerty123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}:3000/api/v1/user/login",
+							"host": [
+								"{{URL}}"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllUser",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"harsh parashar\",\r\n    \"email\":\"test@test.com\",\r\n    \"enrollment_id\":2105113077,\r\n    \"hostel\":\"Tagore A\",\r\n    \"gender\":\"male\",\r\n    \"dob\":\"2011-10-10\",\r\n    \"password\":\"qwerty123\",\r\n    \"passwordConfirm\":\"qwerty123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}:3000/api/v1/user/getAllUsers",
+							"host": [
+								"{{URL}}"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"getAllUsers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SearchUser",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}:3000/api/v1/user/search/name?search=harsh",
+							"host": [
+								"{{URL}}"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"search",
+								"name"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "harsh"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetCurrentUser",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}:3000/api/v1/user/me",
+							"host": [
+								"{{URL}}"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"me"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FindByID",
+					"request": {
+						"auth": {
+							"type": "inherit"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}:3000/api/v1/user/65d3010d4461fefae861f1e0",
+							"host": [
+								"{{URL}}"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"65d3010d4461fefae861f1e0"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "These API will be used to login , signup , logout, search: Users and get Current User profile"
+		},
+		{
+			"name": "Restaurant",
+			"item": [
+				{
+					"name": "getOneRestoMenu",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}:3000/api/v1/restaurant/dakshin",
+							"host": [
+								"{{URL}}"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"restaurant",
+								"dakshin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getOneResto",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}:3000/api/v1/restaurant/pheonix",
+							"host": [
+								"{{URL}}"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"restaurant",
+								"pheonix"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllResto",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}:3000/api/v1/restaurant",
+							"host": [
+								"{{URL}}"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"restaurant"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createResto",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}:3000/api/v1/restaurant",
+							"host": [
+								"{{URL}}"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"restaurant"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Menu",
+			"item": [
+				{
+					"name": "Create Menu",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"foodItem\":\"Noodles\",\r\n    \"price\":60,\r\n    \"category\":\"chinese0\",\r\n    \"restaurant\":\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}:3000/api/v1/menu",
+							"host": [
+								"{{URL}}"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"menu"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getMenu",
+					"request": {
+						"auth": {
+							"type": "inherit"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}:3000/api/v1/menu",
+							"host": [
+								"{{URL}}"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"menu"
+							]
+						},
+						"description": "This API is used to get the menu from the database .\n\nDependind on the optional parameter /menu/:restroID >> user can get Restronaut specific menu."
+					},
+					"response": [
+						{
+							"name": "getMenu",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "127.0.0.1:3000/api/v1/menu",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"menu"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "getMenu",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "127.0.0.1:3000/api/v1/menu",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"menu"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "getMenuByRestroID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}:3000/api/v1/menu/resto/65d841b0492a07bfd5fb0b2e",
+							"host": [
+								"{{URL}}"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"menu",
+								"resto",
+								"65d841b0492a07bfd5fb0b2e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCategoryData",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}:3000/api/v1/menu/util/getCategory",
+							"host": [
+								"{{URL}}"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"menu",
+								"util",
+								"getCategory"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "API to handle fuctionality related to Menu object { Retaled to Restaurant via:: 1:M }"
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "getOrder",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}:3000/api/v1/order",
+							"host": [
+								"{{URL}}"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createOrder",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"item\": [\r\n        {\r\n            \"foodItem\": \"65df0ccd843a3ba41e0ea3b1\",\r\n            \"quantity\": 2\r\n        },\r\n        {\r\n            \"foodItem\": \"65e94150e78edf9871e57895\",\r\n            \"quantity\": 5\r\n        }\r\n    ],\r\n    \"totalPrice\": 500,\r\n    \"deliveredAddress\": \"Just some address\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}:3000/api/v1/order",
+							"host": [
+								"{{URL}}"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cancelOrder",
+					"request": {
+						"auth": {
+							"type": "inherit"
+						},
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}:3000/api/v1/order/65ded2afc6ef447649af7dbf",
+							"host": [
+								"{{URL}}"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"order",
+								"65ded2afc6ef447649af7dbf"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "# This folder cointains all the order APIs :\n\n- getOrder\n    \n- createOrder"
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Logs",
+					"item": [
+						{
+							"name": "getAllLogs",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}:3000/api/v1/admin/log",
+									"host": [
+										"{{URL}}"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"admin",
+										"log"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getAllLogsByUser",
+							"request": {
+								"auth": {
+									"type": "inherit"
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}:3000/api/v1/admin/log/user/65d73137df37dc2a8e860826",
+									"host": [
+										"{{URL}}"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"admin",
+										"log",
+										"user",
+										"65d73137df37dc2a8e860826"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getAllLogsByIp",
+							"request": {
+								"auth": {
+									"type": "inherit"
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}:3000/api/v1/admin/log/ip/127.0.0.1",
+									"host": [
+										"{{URL}}"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"admin",
+										"log",
+										"ip",
+										"127.0.0.1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "key",
+				"value": "X-API-Key",
+				"type": "string"
+			},
+			{
+				"key": "value",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://farming-simulator.pstmn.io"
+		}
+	]
+}
