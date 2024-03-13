@@ -1,8 +1,8 @@
 ![image](https://github.com/Void-Monarch/MJ-server/assets/102967317/87d393ba-bf0b-40c8-8b8c-9de725ac03a4)
 
 ----
-# Work in Progress 
-----
+> # Work in Progress 
+
 # MJ-Store-Server
 
 ## Description 
